@@ -1,0 +1,12 @@
+version: '3.2'
+services:
+  angular:
+    container_name: mean-front
+    build: .
+    ports:
+      - 4200:4200
+    volumes:
+      - .:/front
+    command: yarn run start
+    # networks:
+    #   -

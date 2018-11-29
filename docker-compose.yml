@@ -7,6 +7,7 @@ services:
       - 4200:4200
     volumes:
       - .:/front
+      - /front/node_modules
     command: yarn run start
     # networks:
     #   -

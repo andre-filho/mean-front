@@ -10,8 +10,10 @@ RUN apt-get update -qq && apt-get install -yq google-chrome-stable
 
 WORKDIR /front
 
+RUN curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+
 ADD . /front
 
-RUN yarn install
+RUN yarn add @angular/cli --global && yarn install
 
 CMD yarn run start

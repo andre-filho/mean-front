@@ -9,5 +9,9 @@ services:
       - .:/front
       - /front/node_modules
     command: yarn run start
-    # networks:
-    #   -
+    networks:
+      - default
+      - back_default
+networks:
+  back_default:
+    external: true

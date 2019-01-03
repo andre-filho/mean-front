@@ -1,4 +1,6 @@
-export default interface Post {
+interface Post {
   title: string;
   content: string;
 }
+
+export default Post;
